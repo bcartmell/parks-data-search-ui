@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>National Parks Boundries data search</title>
+
+  <style>
+    fieldset {
+      box-sizing: border-box;
+      border: none;
+      display: inline-block;
+      margin: 0;
+      width: 48%;
+    }
+
+    label {
+      display: block;
+      padding: .3em;
+    }
+
+    button[type="submit"] {
+      margin: 1em 3em;;
+      float: right;
+    }
+
+    em {
+      background: yellow;
+    }
+
+    table {
+      border-collapse: collapse;
+        text-align: left;
+      width: 100%;
+    }
+
+    th {
+      border-bottom: 1px solid #333;
+    }
+
+    td {
+      border-bottom: 1px dotted #eee;
+      line-height: 1.3em;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <form id="search-parks">
+    <fieldset>
+      <label for="unit-name">
+        Park Name
+        <input type="text" id="unit-name" name="properties.UNIT_NAME" />
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="gis-notes">
+        GIS Notes
+        <input type="text" id="gis-notes" name="properties.GIS_NOTES" />
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="unit-code">
+        Unit Code
+        <input type="text" id="unit-code" name="properties.UNIT_CODE">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="unit-type">
+        Unit Type
+        <input type="text" id="unit-type" name="properties.UNIT_TYPE">
+      </label>
+    </fieldset>
+
+    <button type="submit">Search</button>
+  </form>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="./parks-data.js"></script>
+
+</body>
+</html>
